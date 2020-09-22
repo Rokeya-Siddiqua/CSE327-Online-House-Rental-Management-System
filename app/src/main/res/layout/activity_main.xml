@@ -4,14 +4,26 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#3E6F95"
+    android:gravity="center"
+    android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <Button
-        android:id="@+id/nextpageID"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Next page"
-        android:textSize="30dp">
+    <ImageView
+        android:id="@+id/imageId"
+        android:layout_width="153dp"
+        android:layout_height="149dp"
+        android:src="@drawable/imglogin" />
 
-    </Button>
+    <TextView
+        android:id="@+id/ForgetTextViewId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Welcome"
+        android:gravity="center"
+        android:padding="10dp"
+        android:textStyle="bold"
+        android:textSize="35dp"
+        />
+
 </LinearLayout>

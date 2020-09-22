@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#3E6F95"
+    android:orientation="vertical"
+    android:padding="2dp"
+    android:visibility="visible"
+    android:gravity ="center"
+    tools:context=".membershipAcitivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="5dp"
+        android:clickable="false"
+        android:gravity="center_horizontal"
+        android:paddingTop="20dp"
+        android:text="Membership Card"
+        android:textSize="30dp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/RegisterId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="5dp"
+        android:gravity="center"
+        android:text="Registered"
+        android:textColor="@android:color/black" />
+
+
+    <Button
+        android:id="@+id/idNewMember"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="5dp"
+        android:gravity="center"
+        android:text="New Member"
+        android:textColor="@android:color/black" />
+
+
+</LinearLayout>
