@@ -105,6 +105,7 @@ public class record {
         this.contact = contact;
     }
 
+
     /**
      * getLocation will send the house location.
       * @return location  location of the house.
