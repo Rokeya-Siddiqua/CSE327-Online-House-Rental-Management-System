@@ -221,11 +221,13 @@ public class userRegisterOrLogin extends AppCompatActivity {
                         if (task.isSuccessful()) {
                             finish();
                             Toast.makeText(getApplicationContext(), " Sign in is successful",Toast.LENGTH_LONG).show();
-                            Intent intent = new Intent(userRegisterOrLogin.this, houseInformationDetailsRegistration.class);
+                            Intent intent = new Intent(userRegisterOrLogin.this, homePageOnlineRental.class);
                             startActivity(intent);
 
                         } else {
                             Toast.makeText(getApplicationContext(), " Login is unsuccessful",Toast.LENGTH_LONG).show();
+                            Intent intent = new Intent(userRegisterOrLogin.this, userRegisterOrLogin.class);
+                            startActivity(intent);
                         }
                     }
                 });

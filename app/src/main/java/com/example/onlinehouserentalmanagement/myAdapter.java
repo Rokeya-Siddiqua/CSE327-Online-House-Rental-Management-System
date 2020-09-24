@@ -35,6 +35,7 @@ public class myAdapter extends FirebaseRecyclerAdapter<record,myAdapter.myViewHo
         super(options);
     }
 
+
     /**
      * onBindViewHolder is called by RecyclerView to display the data at the specified position.
      * The new ViewHolder will be used to display items of the adapter and it will be re-used to display different items in the data set.
