@@ -19,20 +19,25 @@ public class recordTest {
 
     @Test
     public void getLocationTest() {
-        String actual = "Mirpur"; String n = null;
+        String actual = "Mirpur";
+        String expected, expectNew;
         record r1 = new record();
-        r1.setLocation(actual);
-        String expected = r1.getLocation();
         record r2 = new record();
 
-        assertEquals(expected,actual);
-        assertTrue("Yes expected and actual values are equal.", expected==actual);
-        assertFalse("r1 and r2 is not equal",r1==r2);
-        assertNotNull("object r1 is not null", r1);
-        assertNotNull("object r2 is null", r2);
-        assertNull(n);
-        assertSame(expected, actual);
-        assertNotSame("r1 and r2 are not same", r1, r2);
+        r1.setLocation(actual);
+        expected = r1.getLocation();
+
+        assertEquals("expected and actual values are equal",expected,actual);
+        assertSame("expected and actual values are same", expected, actual);
+        assertTrue("Yes! expected and actual values are equal", expected==actual);
+        assertFalse("No! these objects are not equal",r1==r2);
+        assertNotNull("value is not null", expected);
+
+        r2.setLocation(null);
+        expectNew = r2.getLocation();
+        assertNull("value is null",expectNew);
+        assertNotSame("expected and actual values are not same",expectNew,actual);
+        assertNotEquals("expected and actual values are not equal",expectNew,actual);
     }
 
     @Test
@@ -63,12 +68,25 @@ public class recordTest {
 
     @Test
     public void getSizeTest() {
-        String actual = "20.20sq/ft";
-        record r5 = new record();
-        r5.setSize(actual);
-        String expected = r5.getSize();
-        assertEquals(expected,actual);
-        record r6 = new record();
+        String actual = "20.20 square per feet";
+        String expected, expectNew;
+        record r1 = new record();
+        record r2 = new record();
+
+        r1.setSize(actual);
+        expected = r1.getSize();
+
+        assertEquals("expected and actual values are equal",expected,actual);
+        assertSame("expected and actual values are same", expected, actual);
+        assertTrue("Yes! expected and actual values are equal", expected==actual);
+        assertFalse("No! these objects are not equal",r1==r2);
+        assertNotNull("value is not null", expected);
+
+        r2.setSize(null);
+        expectNew = r2.getSize();
+        assertNull("value is null",expectNew);
+        assertNotSame("expected and actual values are not same",expectNew,actual);
+        assertNotEquals("expected and actual values are not equal",expectNew,actual);
     }
 
     @Test
@@ -101,12 +119,25 @@ public class recordTest {
 
     @Test
     public void getPriceTest() {
-        String actual = "20000 taka";
-        record r9 = new record();
-        r9.setPrice(actual);
-        String expected = r9.getPrice();
-        assertEquals(expected,actual);
-        record r10 = new record();
+        String actual = "2000 taka";
+        String expected, expectNew;
+        record r1 = new record();
+        record r2 = new record();
+
+        r1.setPrice(actual);
+        expected = r1.getPrice();
+
+        assertEquals("expected and actual values are equal",expected,actual);
+        assertSame("expected and actual values are same", expected, actual);
+        assertTrue("Yes! expected and actual values are equal", expected==actual);
+        assertFalse("No! these objects are not equal",r1==r2);
+        assertNotNull("value is not null", expected);
+
+        r2.setPrice(null);
+        expectNew = r2.getPrice();
+        assertNull("value is null",expectNew);
+        assertNotSame("expected and actual values are not same",expectNew,actual);
+        assertNotEquals("expected and actual values are not equal",expectNew,actual);
     }
 
     @Test
@@ -139,12 +170,25 @@ public class recordTest {
 
     @Test
     public void getRoomTest() {
-        String actual = "total 5 rooms";
-        record r13 = new record();
-        r13.setRoom(actual);
-        String expected = r13.getRoom();
-        assertEquals(expected,actual);
-        record r14;
+        String actual = "total room number 8";
+        String expected, expectNew;
+        record r1 = new record();
+        record r2 = new record();
+
+        r1.setRoom(actual);
+        expected = r1.getRoom();
+
+        assertEquals("expected and actual values are equal",expected,actual);
+        assertSame("expected and actual values are same", expected, actual);
+        assertTrue("Yes! expected and actual values are equal", expected==actual);
+        assertFalse("No! these objects are not equal",r1==r2);
+        assertNotNull("value is not null", expected);
+
+        r2.setRoom(null);
+        expectNew = r2.getRoom();
+        assertNull("value is null",expectNew);
+        assertNotSame("expected and actual values are not same",expectNew,actual);
+        assertNotEquals("expected and actual values are not equal",expectNew,actual);
     }
 
     @Test
@@ -177,11 +221,25 @@ public class recordTest {
 
     @Test
     public void getBathroomTest() {
-        String actual = "total bathroom number 2";
+        String actual = "total 3 bathrooms";
+        String expected, expectNew;
         record r1 = new record();
+        record r2 = new record();
+
         r1.setBathroom(actual);
-        String expected = r1.getBathroom();
-        assertEquals(expected,actual);
+        expected = r1.getBathroom();
+
+        assertEquals("expected and actual values are equal",expected,actual);
+        assertSame("expected and actual values are same", expected, actual);
+        assertTrue("Yes! expected and actual values are equal", expected==actual);
+        assertFalse("No! these objects are not equal",r1==r2);
+        assertNotNull("value is not null", expected);
+
+        r2.setBathroom(null);
+        expectNew = r2.getBathroom();
+        assertNull("value is null",expectNew);
+        assertNotSame("expected and actual values are not same",expectNew,actual);
+        assertNotEquals("expected and actual values are not equal",expectNew,actual);
     }
 
     @Test
@@ -214,11 +272,25 @@ public class recordTest {
 
     @Test
     public void getGarageTest() {
-        String actual = "yes! we have garage.";
+        String actual = "yes! we have garage";
+        String expected, expectNew;
         record r1 = new record();
+        record r2 = new record();
+
         r1.setGarage(actual);
-        String expected = r1.getGarage();
-        assertEquals(expected,actual);
+        expected = r1.getGarage();
+
+        assertEquals("expected and actual values are equal",expected,actual);
+        assertSame("expected and actual values are same", expected, actual);
+        assertTrue("Yes! expected and actual values are equal", expected==actual);
+        assertFalse("No! these objects are not equal",r1==r2);
+        assertNotNull("value is not null", expected);
+
+        r2.setGarage(null);
+        expectNew = r2.getGarage();
+        assertNull("value is null",expectNew);
+        assertNotSame("expected and actual values are not same",expectNew,actual);
+        assertNotEquals("expected and actual values are not equal",expectNew,actual);
     }
 
     @Test
@@ -251,11 +323,25 @@ public class recordTest {
 
     @Test
     public void getResidentTest() {
-        String actual = "Private house";
+        String actual = "apartment house";
+        String expected, expectNew;
         record r1 = new record();
+        record r2 = new record();
+
         r1.setResident(actual);
-        String expected = r1.getResident();
-        assertEquals(expected,actual);
+        expected = r1.getResident();
+
+        assertEquals("expected and actual values are equal",expected,actual);
+        assertSame("expected and actual values are same", expected, actual);
+        assertTrue("Yes! expected and actual values are equal", expected==actual);
+        assertFalse("No! these objects are not equal",r1==r2);
+        assertNotNull("value is not null", expected);
+
+        r2.setResident(null);
+        expectNew = r2.getResident();
+        assertNull("value is null",expectNew);
+        assertNotSame("expected and actual values are not same",expectNew,actual);
+        assertNotEquals("expected and actual values are not equal",expectNew,actual);
     }
 
     @Test
@@ -288,11 +374,25 @@ public class recordTest {
 
     @Test
     public void getServiceTest() {
-        String actual = "No. Service charge is not included.";
+        String actual = "No! Service charge is not included";
+        String expected, expectNew;
         record r1 = new record();
+        record r2 = new record();
+
         r1.setService(actual);
-        String expected = r1.getService();
-        assertEquals(expected,actual);
+        expected = r1.getService();
+
+        assertEquals("expected and actual values are equal",expected,actual);
+        assertSame("expected and actual values are same", expected, actual);
+        assertTrue("Yes! expected and actual values are equal", expected==actual);
+        assertFalse("No! these objects are not equal",r1==r2);
+        assertNotNull("value is not null", expected);
+
+        r2.setService(null);
+        expectNew = r2.getService();
+        assertNull("value is null",expectNew);
+        assertNotSame("expected and actual values are not same",expectNew,actual);
+        assertNotEquals("expected and actual values are not equal",expectNew,actual);
     }
 
     @Test
@@ -325,11 +425,25 @@ public class recordTest {
 
     @Test
     public void getFacingTest() {
-        String actual = "Facing direction is North";
+        String actual = "House facing direction is North";
+        String expected, expectNew;
         record r1 = new record();
+        record r2 = new record();
+
         r1.setFacing(actual);
-        String expected = r1.getFacing();
-        assertEquals(expected,actual);
+        expected = r1.getFacing();
+
+        assertEquals("expected and actual values are equal",expected,actual);
+        assertSame("expected and actual values are same", expected, actual);
+        assertTrue("Yes! expected and actual values are equal", expected==actual);
+        assertFalse("No! these objects are not equal",r1==r2);
+        assertNotNull("value is not null", expected);
+
+        r2.setFacing(null);
+        expectNew = r2.getFacing();
+        assertNull("value is null",expectNew);
+        assertNotSame("expected and actual values are not same",expectNew,actual);
+        assertNotEquals("expected and actual values are not equal",expectNew,actual);
     }
 
     @Test
@@ -362,11 +476,25 @@ public class recordTest {
 
     @Test
     public void getNearbyTest() {
-        String actual = "Near by a School and a College";
+        String actual = "House is near by a School and a College";
+        String expected, expectNew;
         record r1 = new record();
+        record r2 = new record();
+
         r1.setNearby(actual);
-        String expected = r1.getNearby();
-        assertEquals(expected,actual);
+        expected = r1.getNearby();
+
+        assertEquals("expected and actual values are equal",expected,actual);
+        assertSame("expected and actual values are same", expected, actual);
+        assertTrue("Yes! expected and actual values are equal", expected==actual);
+        assertFalse("No! these objects are not equal",r1==r2);
+        assertNotNull("value is not null", expected);
+
+        r2.setNearby(null);
+        expectNew = r2.getNearby();
+        assertNull("value is null",expectNew);
+        assertNotSame("expected and actual values are not same",expectNew,actual);
+        assertNotEquals("expected and actual values are not equal",expectNew,actual);
     }
 
     @Test
@@ -399,11 +527,25 @@ public class recordTest {
 
     @Test
     public void getOtherTest() {
-        String actual = "welcome to our house!";
+        String actual = "welcome to our house";
+        String expected, expectNew;
         record r1 = new record();
+        record r2 = new record();
+
         r1.setOther(actual);
-        String expected = r1.getOther();
-        assertEquals(expected,actual);
+        expected = r1.getOther();
+
+        assertEquals("expected and actual values are equal",expected,actual);
+        assertSame("expected and actual values are same", expected, actual);
+        assertTrue("Yes! expected and actual values are equal", expected==actual);
+        assertFalse("No! these objects are not equal",r1==r2);
+        assertNotNull("value is not null", expected);
+
+        r2.setOther(null);
+        expectNew = r2.getOther();
+        assertNull("value is null",expectNew);
+        assertNotSame("expected and actual values are not same",expectNew,actual);
+        assertNotEquals("expected and actual values are not equal",expectNew,actual);
     }
 
     @Test
@@ -436,11 +578,25 @@ public class recordTest {
 
     @Test
     public void getPtimeTest() {
-        String actual = "08:00am-08:00pm";
+        String actual = "08:30am-07:00pm";
+        String expected, expectNew;
         record r1 = new record();
+        record r2 = new record();
+
         r1.setPtime(actual);
-        String expected = r1.getPtime();
-        assertEquals(expected,actual);
+        expected = r1.getPtime();
+
+        assertEquals("expected and actual values are equal",expected,actual);
+        assertSame("expected and actual values are same", expected, actual);
+        assertTrue("Yes! expected and actual values are equal", expected==actual);
+        assertFalse("No! these objects are not equal",r1==r2);
+        assertNotNull("value is not null", expected);
+
+        r2.setPtime(null);
+        expectNew = r2.getPtime();
+        assertNull("value is null",expectNew);
+        assertNotSame("expected and actual values are not same",expectNew,actual);
+        assertNotEquals("expected and actual values are not equal",expectNew,actual);
     }
 
     @Test
@@ -465,7 +621,7 @@ public class recordTest {
         assertNotSame("these are not same", r11, r12);
 
         r11.setPtime(actual);
-        expected = r11.getPrice();
+        expected = r11.getPtime();
         assertEquals(expected,actual);
         assertTrue("Yes expected and actual values are equal.", expected==actual);
         assertSame(expected, actual);
@@ -473,11 +629,25 @@ public class recordTest {
 
     @Test
     public void getPetTest() {
-        String actual = "Yes! you can bring your pet.";
+        String actual = "No! no pet is allowed here";
+        String expected, expectNew;
         record r1 = new record();
+        record r2 = new record();
+
         r1.setPet(actual);
-        String expected = r1.getPet();
-        assertEquals(expected,actual);
+        expected = r1.getPet();
+
+        assertEquals("expected and actual values are equal",expected,actual);
+        assertSame("expected and actual values are same", expected, actual);
+        assertTrue("Yes! expected and actual values are equal", expected==actual);
+        assertFalse("No! these objects are not equal",r1==r2);
+        assertNotNull("value is not null", expected);
+
+        r2.setPet(null);
+        expectNew = r2.getPet();
+        assertNull("value is null",expectNew);
+        assertNotSame("expected and actual values are not same",expectNew,actual);
+        assertNotEquals("expected and actual values are not equal",expectNew,actual);
     }
 
     @Test
@@ -510,11 +680,25 @@ public class recordTest {
 
     @Test
     public void getContactTest() {
-        String actual = "01191526119";
+        String actual = "01198954997";
+        String expected, expectNew;
         record r1 = new record();
+        record r2 = new record();
+
         r1.setContact(actual);
-        String expected = r1.getContact();
-        assertEquals(expected,actual);
+        expected = r1.getContact();
+
+        assertEquals("expected and actual values are equal",expected,actual);
+        assertSame("expected and actual values are same", expected, actual);
+        assertTrue("Yes! expected and actual values are equal", expected==actual);
+        assertFalse("No! these objects are not equal",r1==r2);
+        assertNotNull("value is not null", expected);
+
+        r2.setContact(null);
+        expectNew = r2.getContact();
+        assertNull("value is null",expectNew);
+        assertNotSame("expected and actual values are not same",expectNew,actual);
+        assertNotEquals("expected and actual values are not equal",expectNew,actual);
     }
 
     @Test
@@ -548,10 +732,24 @@ public class recordTest {
     @Test
     public void getPuriTest() {
         String actual = "https://com.google.com";
+        String expected, expectNew;
         record r1 = new record();
+        record r2 = new record();
+
         r1.setPuri(actual);
-        String expected = r1.getPuri();
-        assertEquals(expected,actual);
+        expected = r1.getPuri();
+
+        assertEquals("expected and actual values are equal",expected,actual);
+        assertSame("expected and actual values are same", expected, actual);
+        assertTrue("Yes! expected and actual values are equal", expected==actual);
+        assertFalse("No! these objects are not equal",r1==r2);
+        assertNotNull("value is not null", expected);
+
+        r2.setPuri(null);
+        expectNew = r2.getPuri();
+        assertNull("value is null",expectNew);
+        assertNotSame("expected and actual values are not same",expectNew,actual);
+        assertNotEquals("expected and actual values are not equal",expectNew,actual);
     }
 
     @Test
