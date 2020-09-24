@@ -8,156 +8,168 @@
     android:orientation="vertical"
     tools:context=".demoPage">
 
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Online House Rental Management System"
-        android:textStyle="bold"
-        android:textSize="35sp"
-        android:textColor="#B61515"
-        android:gravity="center_horizontal"
-        android:background="#B6C2D1">
-    </TextView>
-
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Welcome To Our System"
-        android:textStyle="bold"
-        android:textSize="15sp"
-        android:textColor="@color/common_google_signin_btn_text_light_pressed"
-        android:gravity="center_horizontal"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="30dp">
-    </TextView>
-
-    <Button
-        android:id="@+id/loginOrRegister_demoPage_ID"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Register or Login"
-        android:textSize="25sp"
-        android:textColor="#022513"
-        android:textStyle="bold"
-        android:background="@android:color/darker_gray"
-        android:layout_marginTop="15dp"
-        android:layout_gravity="center_horizontal">
-    </Button>
-
-    <Button
-        android:id="@+id/membership_demoPage_ID"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Membership"
-        android:textSize="25sp"
-        android:textColor="#022513"
-        android:textStyle="bold"
-        android:background="@android:color/darker_gray"
-        android:layout_marginTop="15dp"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginBottom="50dp">
-    </Button>
-
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:background="#373030">
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="200dp"
-                android:orientation="vertical"
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Online House Rental Management System"
+                android:textStyle="bold"
+                android:textSize="35sp"
+                android:textColor="#B61515"
+                android:gravity="center_horizontal"
+                android:background="#B6C2D1">
+            </TextView>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Welcome To Our System"
+                android:textStyle="bold"
+                android:textSize="15sp"
+                android:textColor="@color/common_google_signin_btn_text_light_pressed"
+                android:gravity="center_horizontal"
                 android:layout_marginTop="10dp"
-                android:layout_marginLeft="15dp">
+                android:layout_marginBottom="30dp">
+            </TextView>
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Contact Us"
-                    android:textStyle="bold"
-                    android:textSize="30sp"
-                    android:textColor="#FBF8F8"
-                    android:layout_marginBottom="10dp">
-                </TextView>
-
-                <Button
-                    android:id="@+id/email_demoPage_ID"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Email"
-                    android:textStyle="bold"
-                    android:textSize="20sp"
-                    android:textColor="#FBF8F8"
-                    android:layout_marginLeft="20dp"
-                    android:background="#373030">
-                </Button>
-
-                <Button
-                    android:id="@+id/sms_demoPage_ID"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="SMS"
-                    android:textStyle="bold"
-                    android:textSize="20sp"
-                    android:textColor="#FBF8F8"
-                    android:layout_marginLeft="20dp"
-                    android:background="#373030">
-                </Button>
-
-                <Button
-                    android:id="@+id/chat_demoPage_ID"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Chat"
-                    android:textStyle="bold"
-                    android:textSize="20sp"
-                    android:textColor="#FBF8F8"
-                    android:layout_marginLeft="20dp"
-                    android:background="#373030">
-                </Button>
-
-            </LinearLayout>
-
-            <LinearLayout
+            <Button
+                android:id="@+id/loginOrRegister_demoPage_ID"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_marginLeft="90dp">
+                android:text="Register or Login"
+                android:textSize="25sp"
+                android:textColor="#022513"
+                android:textStyle="bold"
+                android:background="@android:color/darker_gray"
+                android:layout_marginTop="15dp"
+                android:layout_gravity="center_horizontal">
+            </Button>
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="About Us"
-                    android:textSize="30sp"
-                    android:textColor="#FBF8F8"
-                    android:textStyle="bold"
-                    android:layout_marginTop="10dp">
-                </TextView>
+            <Button
+                android:id="@+id/membership_demoPage_ID"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Membership"
+                android:textSize="25sp"
+                android:textColor="#022513"
+                android:textStyle="bold"
+                android:background="@android:color/darker_gray"
+                android:layout_marginTop="15dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="50dp">
+            </Button>
 
-                <Button
-                    android:id="@+id/about_demoPage_ID"
-                    android:layout_width="wrap_content"
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="About"
-                    android:textStyle="bold"
-                    android:textSize="20sp"
-                    android:textColor="#FBF8F8"
-                    android:layout_marginLeft="20dp"
+                    android:orientation="horizontal"
                     android:background="#373030">
-                </Button>
 
-            </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="200dp"
+                        android:orientation="vertical"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="15dp">
 
-            ></LinearLayout>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Contact Us"
+                            android:textStyle="bold"
+                            android:textSize="30sp"
+                            android:textColor="#FBF8F8"
+                            android:layout_marginBottom="10dp">
+                        </TextView>
 
+                        <Button
+                            android:id="@+id/email_demoPage_ID"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Email"
+                            android:textStyle="bold"
+                            android:textSize="20sp"
+                            android:textColor="#FBF8F8"
+                            android:layout_marginLeft="20dp"
+                            android:background="#373030">
+                        </Button>
+
+                        <Button
+                            android:id="@+id/sms_demoPage_ID"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="SMS"
+                            android:textStyle="bold"
+                            android:textSize="20sp"
+                            android:textColor="#FBF8F8"
+                            android:layout_marginLeft="20dp"
+                            android:background="#373030">
+                        </Button>
+
+                        <Button
+                            android:id="@+id/chat_demoPage_ID"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Chat"
+                            android:textStyle="bold"
+                            android:textSize="20sp"
+                            android:textColor="#FBF8F8"
+                            android:layout_marginLeft="20dp"
+                            android:background="#373030">
+                        </Button>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginLeft="60dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="About Us"
+                            android:textSize="30sp"
+                            android:textColor="#FBF8F8"
+                            android:textStyle="bold"
+                            android:layout_marginTop="10dp">
+                        </TextView>
+
+                        <Button
+                            android:id="@+id/about_demoPage_ID"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="About"
+                            android:textStyle="bold"
+                            android:textSize="20sp"
+                            android:textColor="#FBF8F8"
+                            android:layout_marginLeft="20dp"
+                            android:background="#373030">
+                        </Button>
+
+                    </LinearLayout>
+
+                    ></LinearLayout>
+
+            </ScrollView>
+
+
+
+        </LinearLayout>
     </ScrollView>
-
 
 </LinearLayout>
