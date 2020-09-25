@@ -207,6 +207,106 @@ public class houseInformationDetailsRegistration extends AppCompatActivity {
      */
     public void saveHouseInformation() {
 
+        String locationstr = location.getText().toString().trim();
+        String sizestr = size.getText().toString().trim();
+        String pricestr = price.getText().toString().trim();
+        String roomstr = room.getText().toString().trim();
+        String bathroomstr = bathroom.getText().toString().trim();
+        String garagestr = garage.getText().toString().trim();
+        String residentstr = resident.getText().toString().trim();
+        String servicestr = service.getText().toString().trim();
+        String facingstr = facing.getText().toString().trim();
+        String nearbystr = nearby.getText().toString().trim();
+        String otherstr = other.getText().toString().trim();
+        String preferedtimestr = preferdtime.getText().toString().trim();
+        String petstr = pet.getText().toString().trim();
+        String contactstr = contact.getText().toString().trim();
+
+        if(locationstr.equals(""))
+        {
+            location.setError(" Please enter the house location");
+            location.requestFocus();
+            return;
+        }
+        if(sizestr.equals(""))
+        {
+            size.setError(" Please enter the house size");
+            size.requestFocus();
+            return;
+        }
+        if(pricestr.equals(""))
+        {
+            price.setError(" Please enter the house rental price");
+            price.requestFocus();
+            return;
+        }
+        if(roomstr.equals(""))
+        {
+            room.setError(" Please enter the house room number");
+            room.requestFocus();
+            return;
+        }
+        if(bathroomstr.equals(""))
+        {
+            bathroom.setError(" Please enter the house bathroom number");
+            bathroom.requestFocus();
+            return;
+        }
+        if(garagestr.equals(""))
+        {
+            garage.setError(" Please enter this field");
+            garage.requestFocus();
+            return;
+        }
+        if(servicestr.equals(""))
+        {
+            service.setError(" Please enter this field");
+            service.requestFocus();
+            return;
+        }
+        if(residentstr.equals(""))
+        {
+            resident.setError(" Please enter this field");
+            resident.requestFocus();
+            return;
+        }
+        if(facingstr.equals(""))
+        {
+            facing.setError(" Please enter this field");
+            facing.requestFocus();
+            return;
+        }
+        if(nearbystr.equals(""))
+        {
+            nearby.setError(" Please enter this field");
+            nearby.requestFocus();
+            return;
+        }
+        if(otherstr.equals(""))
+        {
+            other.setError(" Please enter this field");
+            other.requestFocus();
+            return;
+        }
+        if(petstr.equals(""))
+        {
+            pet.setError(" Please enter this field");
+            pet.requestFocus();
+            return;
+        }
+        if(preferedtimestr.equals(""))
+        {
+            preferdtime.setError(" Please enter this field");
+            preferdtime.requestFocus();
+            return;
+        }
+        if(contactstr.equals(""))
+        {
+            contact.setError(" Please enter this field");
+            contact.requestFocus();
+            return;
+        }
+
 
         final ProgressDialog dialog = new ProgressDialog(this);
         dialog.setTitle("File Uploader");
@@ -253,7 +353,8 @@ public class houseInformationDetailsRegistration extends AppCompatActivity {
                                 Toast.makeText(getApplicationContext(),"House information stored successfully!",Toast.LENGTH_LONG).show();
 
 
-                                Intent intent = new Intent(houseInformationDetailsRegistration.this, demoDataFetch.class);
+
+                                Intent intent = new Intent(houseInformationDetailsRegistration.this, homePageOnlineRental.class);
                                 startActivity(intent);
                             }
                         });

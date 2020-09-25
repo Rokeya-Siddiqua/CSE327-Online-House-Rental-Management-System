@@ -1,5 +1,6 @@
 package com.example.onlinehouserentalmanagement;
 
+
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -9,15 +10,15 @@ public class recordTest {
 
     @Before
     public void setUp() throws Exception {
-        record r1 = new record();
+        System.out.println("text cases has started");
     }
 
     @After
     public void tearDown() throws Exception {
-        record r1 = new record();
+        System.out.println("text cases are finished");
     }
 
-    @Test
+    @Test (expected = NullPointerException.class)
     public void getLocationTest() {
         String actual = "Mirpur";
         String expected, expectNew;
@@ -40,7 +41,7 @@ public class recordTest {
         assertNotEquals("expected and actual values are not equal",expectNew,actual);
     }
 
-    @Test
+    @Test (expected = NullPointerException.class)
     public void setLocationTest() {
         String actual = "Mirpur";
         record r3 = new record();
@@ -66,8 +67,31 @@ public class recordTest {
         assertSame(expected, actual);
     }
 
-    @Test
+    @Test (expected = NullPointerException.class)
     public void getSizeTest() {
+        String actual = "20.20";
+        String expected, expectNew;
+        record r1 = new record();
+        record r2 = new record();
+
+        r1.setSize(actual);
+        expected = r1.getSize();
+
+        assertEquals("expected and actual values are equal",expected,actual);
+        assertSame("expected and actual values are same", expected, actual);
+        assertTrue("Yes! expected and actual values are equal", expected==actual);
+        assertFalse("No! these objects are not equal",r1==r2);
+        assertNotNull("value is not null", expected);
+
+        r2.setSize(null);
+        expectNew = r2.getSize();
+        assertNull("value is null",expectNew);
+        assertNotSame("expected and actual values are not same",expectNew,actual);
+        assertNotEquals("expected and actual values are not equal",expectNew,actual);
+    }
+
+    @Test (expected = NumberFormatException.class)
+    public void getSizeNumberFormatExceptionTest() {
         String actual = "20.20 square per feet";
         String expected, expectNew;
         record r1 = new record();
@@ -89,7 +113,8 @@ public class recordTest {
         assertNotEquals("expected and actual values are not equal",expectNew,actual);
     }
 
-    @Test
+
+    @Test (expected = NullPointerException.class)
     public void setSizeTest() {
         String actual = "20.20 square per feet";
         String expected, expectedNew;
@@ -117,9 +142,33 @@ public class recordTest {
         assertSame(expected, actual);
     }
 
-    @Test
+    @Test (expected = IllegalArgumentException.class)
+    public void setSizeIllegalArgumentExceptionTest() {
+        String actual = "-50";
+        String expectedNew;
+        record r8 = new record();
+
+        r8.setSize(actual);
+        expectedNew = r8.getSize();
+        assertNotNull("size of object r8 is not null", expectedNew);
+        assertNotNull("object r8 is not null", r8);
+    }
+
+    @Test (expected = NumberFormatException.class)
+    public void setSizeNumberFormatExceptionTest() {
+        String actual = "fifty square feet";
+        String expectedNew;
+        record r8 = new record();
+
+        r8.setSize(actual);
+        expectedNew = r8.getSize();
+        assertNotNull("size of object r8 is not null", expectedNew);
+        assertNotNull("object r8 is not null", r8);
+    }
+
+    @Test (expected = NullPointerException.class)
     public void getPriceTest() {
-        String actual = "2000 taka";
+        String actual = "2000";
         String expected, expectNew;
         record r1 = new record();
         record r2 = new record();
@@ -140,9 +189,9 @@ public class recordTest {
         assertNotEquals("expected and actual values are not equal",expectNew,actual);
     }
 
-    @Test
+    @Test (expected = NullPointerException.class)
     public void setPriceTest() {
-        String actual = "20000 taka";
+        String actual = "20000";
         String expected, expectedNew;
         record r11 = new record();
         record r12 = new record();
@@ -168,7 +217,31 @@ public class recordTest {
         assertSame(expected, actual);
     }
 
-    @Test
+    @Test (expected = IllegalArgumentException.class)
+    public void setPriceIllegalArgumentExceptionTest() {
+        String actual = "-500";
+        String expectedNew;
+        record r12 = new record();
+
+        r12.setPrice(actual);
+        expectedNew = r12.getPrice();
+        assertNotNull("price is not null", expectedNew);
+        assertNotNull("object is not null", r12);
+    }
+
+    @Test (expected = NumberFormatException.class)
+    public void setPriceNumberFormatExceptionTest() {
+        String actual = "2000 taka";
+        String expectedNew;
+        record r12 = new record();
+
+        r12.setPrice(actual);
+        expectedNew = r12.getPrice();
+        assertNotNull("price is not null", expectedNew);
+        assertNotNull("object is not null", r12);
+    }
+
+    @Test (expected = NullPointerException.class)
     public void getRoomTest() {
         String actual = "total room number 8";
         String expected, expectNew;
@@ -191,7 +264,7 @@ public class recordTest {
         assertNotEquals("expected and actual values are not equal",expectNew,actual);
     }
 
-    @Test
+    @Test (expected = NullPointerException.class)
     public void setRoomTest() {
         String actual = "total 5 rooms";
         String expected, expectedNew;
@@ -219,7 +292,7 @@ public class recordTest {
         assertSame(expected, actual);
     }
 
-    @Test
+    @Test (expected = NullPointerException.class)
     public void getBathroomTest() {
         String actual = "total 3 bathrooms";
         String expected, expectNew;
@@ -242,7 +315,7 @@ public class recordTest {
         assertNotEquals("expected and actual values are not equal",expectNew,actual);
     }
 
-    @Test
+    @Test (expected = NullPointerException.class)
     public void setBathroomTest() {
         String actual = "total 3 bathrooms";
         String expected, expectedNew;
@@ -270,7 +343,7 @@ public class recordTest {
         assertSame(expected, actual);
     }
 
-    @Test
+    @Test (expected = NullPointerException.class)
     public void getGarageTest() {
         String actual = "yes! we have garage";
         String expected, expectNew;
@@ -293,7 +366,7 @@ public class recordTest {
         assertNotEquals("expected and actual values are not equal",expectNew,actual);
     }
 
-    @Test
+    @Test (expected = NullPointerException.class)
     public void setGarageTest() {
         String actual = "yes we have garage";
         String expected, expectedNew;
@@ -321,7 +394,7 @@ public class recordTest {
         assertSame(expected, actual);
     }
 
-    @Test
+    @Test (expected = NullPointerException.class)
     public void getResidentTest() {
         String actual = "apartment house";
         String expected, expectNew;
@@ -344,7 +417,7 @@ public class recordTest {
         assertNotEquals("expected and actual values are not equal",expectNew,actual);
     }
 
-    @Test
+    @Test (expected = NullPointerException.class)
     public void setResidentTest() {
         String actual = "private house";
         String expected, expectedNew;
@@ -372,7 +445,7 @@ public class recordTest {
         assertSame(expected, actual);
     }
 
-    @Test
+    @Test (expected = NullPointerException.class)
     public void getServiceTest() {
         String actual = "No! Service charge is not included";
         String expected, expectNew;
@@ -395,7 +468,7 @@ public class recordTest {
         assertNotEquals("expected and actual values are not equal",expectNew,actual);
     }
 
-    @Test
+    @Test (expected = NullPointerException.class)
     public void setServiceTest() {
         String actual = "No! Service charge is not included.";
         String expected, expectedNew;
@@ -423,7 +496,7 @@ public class recordTest {
         assertSame(expected, actual);
     }
 
-    @Test
+    @Test (expected = NullPointerException.class)
     public void getFacingTest() {
         String actual = "House facing direction is North";
         String expected, expectNew;
@@ -446,7 +519,7 @@ public class recordTest {
         assertNotEquals("expected and actual values are not equal",expectNew,actual);
     }
 
-    @Test
+    @Test (expected = NullPointerException.class)
     public void setFacingTest() {
         String actual = "facing direction is south";
         String expected, expectedNew;
@@ -474,7 +547,7 @@ public class recordTest {
         assertSame(expected, actual);
     }
 
-    @Test
+    @Test (expected = NullPointerException.class)
     public void getNearbyTest() {
         String actual = "House is near by a School and a College";
         String expected, expectNew;
@@ -497,7 +570,7 @@ public class recordTest {
         assertNotEquals("expected and actual values are not equal",expectNew,actual);
     }
 
-    @Test
+    @Test (expected = NullPointerException.class)
     public void setNearbyTest() {
         String actual = "Near by university and market";
         String expected, expectedNew;
@@ -525,7 +598,7 @@ public class recordTest {
         assertSame(expected, actual);
     }
 
-    @Test
+    @Test (expected = NullPointerException.class)
     public void getOtherTest() {
         String actual = "welcome to our house";
         String expected, expectNew;
@@ -548,7 +621,7 @@ public class recordTest {
         assertNotEquals("expected and actual values are not equal",expectNew,actual);
     }
 
-    @Test
+    @Test (expected = NullPointerException.class)
     public void setOtherTest() {
         String actual = "welcome to our home";
         String expected, expectedNew;
@@ -576,7 +649,7 @@ public class recordTest {
         assertSame(expected, actual);
     }
 
-    @Test
+    @Test (expected = NullPointerException.class)
     public void getPtimeTest() {
         String actual = "08:30am-07:00pm";
         String expected, expectNew;
@@ -599,7 +672,7 @@ public class recordTest {
         assertNotEquals("expected and actual values are not equal",expectNew,actual);
     }
 
-    @Test
+    @Test (expected = NullPointerException.class)
     public void setPtimeTest() {
         String actual = "08:00am - 08:00pm";
         String expected, expectedNew;
@@ -627,7 +700,7 @@ public class recordTest {
         assertSame(expected, actual);
     }
 
-    @Test
+    @Test (expected = NullPointerException.class)
     public void getPetTest() {
         String actual = "No! no pet is allowed here";
         String expected, expectNew;
@@ -650,7 +723,7 @@ public class recordTest {
         assertNotEquals("expected and actual values are not equal",expectNew,actual);
     }
 
-    @Test
+    @Test (expected = NullPointerException.class)
     public void setPetTest() {
         String actual = "yes! you can bring your pet.";
         String expected, expectedNew;
@@ -678,7 +751,7 @@ public class recordTest {
         assertSame(expected, actual);
     }
 
-    @Test
+    @Test (expected = NullPointerException.class)
     public void getContactTest() {
         String actual = "01198954997";
         String expected, expectNew;
@@ -701,7 +774,7 @@ public class recordTest {
         assertNotEquals("expected and actual values are not equal",expectNew,actual);
     }
 
-    @Test
+    @Test (expected = NullPointerException.class)
     public void setContactTest() {
         String actual = "01191526119";
         String expected, expectedNew;
@@ -729,7 +802,7 @@ public class recordTest {
         assertSame(expected, actual);
     }
 
-    @Test
+    @Test (expected = NullPointerException.class)
     public void getPuriTest() {
         String actual = "https://com.google.com";
         String expected, expectNew;
@@ -752,7 +825,7 @@ public class recordTest {
         assertNotEquals("expected and actual values are not equal",expectNew,actual);
     }
 
-    @Test
+    @Test (expected = NullPointerException.class)
     public void setPuriTest() {
         String actual = "https://com.google.com";
         String expected, expectedNew;
