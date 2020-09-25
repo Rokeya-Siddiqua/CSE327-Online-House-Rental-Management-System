@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#3E6F95"
+    android:orientation="vertical"
+    tools:context=".homePageOnlineRental">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="HOME PAGE"
+                android:textSize="50sp"
+                android:textStyle="bold"
+                android:textColor="#36DC95"
+                android:gravity="center_horizontal"
+                android:padding="2dp">
+            </TextView>
+
+            <Button
+                android:id="@+id/demo_data_page_ID"
+                android:layout_width="150sp"
+                android:layout_height="wrap_content"
+                android:text="Tenant"
+                android:textStyle="bold"
+                android:textSize="25sp"
+                android:textColor="#150101"
+                android:background="#ff22"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="90dp">
+            </Button>
+
+            <Button
+                android:id="@+id/house_info_page_ID"
+                android:layout_width="150sp"
+                android:layout_height="wrap_content"
+                android:text="Landlord"
+                android:textStyle="bold"
+                android:textSize="25sp"
+                android:textColor="#150101"
+                android:background="#ff22"
+                android:layout_marginTop="40dp"
+                android:layout_gravity="center_horizontal">
+            </Button>
+
+            <Button
+                android:id="@+id/paymentId"
+                android:layout_width="190sp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="40dp"
+                android:background="#ff22"
+                android:text="Payment"
+                android:textColor="#150101"
+                android:textSize="25sp"
+                android:textStyle="bold"></Button>
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:background="#373030"
+                    android:layout_marginTop="70dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="200dp"
+                        android:orientation="vertical"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="15dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Contact Us"
+                            android:textStyle="bold"
+                            android:textSize="30sp"
+                            android:textColor="#FBF8F8"
+                            android:layout_marginBottom="10dp">
+                        </TextView>
+
+                        <Button
+                            android:id="@+id/email_homePage_ID"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Email"
+                            android:textStyle="bold"
+                            android:textSize="20sp"
+                            android:textColor="#FBF8F8"
+                            android:layout_marginLeft="20dp"
+                            android:background="#373030">
+                        </Button>
+
+                        <Button
+                            android:id="@+id/sms_homePage_ID"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="SMS"
+                            android:textStyle="bold"
+                            android:textSize="20sp"
+                            android:textColor="#FBF8F8"
+                            android:layout_marginLeft="20dp"
+                            android:background="#373030">
+                        </Button>
+
+                        <Button
+                            android:id="@+id/chat_homePage_ID"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Chat"
+                            android:textStyle="bold"
+                            android:textSize="20sp"
+                            android:textColor="#FBF8F8"
+                            android:layout_marginLeft="20dp"
+                            android:background="#373030">
+                        </Button>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginLeft="60dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="About Us"
+                            android:textSize="30sp"
+                            android:textColor="#FBF8F8"
+                            android:textStyle="bold"
+                            android:layout_marginTop="10dp">
+                        </TextView>
+
+                        <Button
+                            android:id="@+id/about_homePage_ID"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="About"
+                            android:textStyle="bold"
+                            android:textSize="20sp"
+                            android:textColor="#FBF8F8"
+                            android:layout_marginLeft="20dp"
+                            android:background="#373030">
+                        </Button>
+
+                    </LinearLayout>
+
+                    ></LinearLayout>
+
+            </ScrollView>
+
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

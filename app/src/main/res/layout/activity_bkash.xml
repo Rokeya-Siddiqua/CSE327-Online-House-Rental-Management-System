@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#3E6F95"
+    android:orientation="vertical"
+    android:padding="2dp"
+    android:visibility="visible"
+    tools:context=".bkashActivity">
+
+    <EditText
+        android:id="@+id/idAccountNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Account Number"
+        android:inputType="number" />
+
+    <EditText
+        android:id="@+id/idPIN"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="bKash PIN"
+        android:inputType="number"/>
+
+    <EditText
+        android:id="@+id/idAmount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Total Amount"
+        android:inputType="number"/>
+
+
+
+
+    <Button
+        android:id="@+id/btnNext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="45dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="45dp"
+        android:gravity="center"
+        android:text="Next"
+        android:textColor="@android:color/black" />
+
+
+
+</LinearLayout>
