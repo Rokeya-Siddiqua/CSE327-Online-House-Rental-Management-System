@@ -20,12 +20,22 @@ import android.widget.Toast;
 
 /**
  * smsActivity represents to send any message given by user.
- * User can give their number and send message.
+ * User can contact with the admin for any help through giving sms .
+ * User have to visit demo page first
+ * and by clicking the sms button,they can enter to this page.
+ * user will have to set their number and can give any message to admin regarding to this app,
+ * Their message will came to admin with their number.
  */
 public class smsActivity extends AppCompatActivity {
 
     public EditText phoneNumber;
     public EditText message;
+
+    /**
+     * onCreate function is Called when the activity is first created.
+     * This method also provides a Bundle containing the activity's previously frozen state, if there was one.
+     * @param savedInstanceState  it is a Bundle containing the activity's previously frozen state.
+     */
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,7 +47,11 @@ public class smsActivity extends AppCompatActivity {
     }
 
     /**
-     * sendID represents to check and get permission of sending message.
+     * To access mobile their will needed a permission which is set to the manifest.
+     * This method will ask permission to user of sending message .
+     * if user give the  permission to checked then it will proceed to send message.
+     * If user don't give permission it will ask the user again.
+     * without getting it will not let user to send message.
      * @param view  represents to get all the component from view group.
      */
 
@@ -61,8 +75,12 @@ public class smsActivity extends AppCompatActivity {
     }
 
     /**
-     * MyMessage represent to send message.
-     * it will sent message to user's given number.
+     * MyMessage represent user to send message.
+     * This method will the get the phone number and message which user will give.
+     * And then it will let user send message.
+     * It will check user phone number and message is given or not.
+     * If everything is given then it will let user send message and display confirmation message
+     * and if not it will display a message and ask to try again
      */
 
     private void myMessage()
@@ -89,6 +107,10 @@ public class smsActivity extends AppCompatActivity {
 
     /**
      * onRequestPermissionsResult will represents to check condition of sending message.
+     * It will check permission is granted or not.
+     * It will check user input length is greater then zero or not
+     * If everything is given then it will let user send message
+     * and if not it will display a error message.
      * @param requestCode  will get the code from user.
      * @param permissions  will request user to give permission.
      * @param grantResults  will get the permission and check condition.

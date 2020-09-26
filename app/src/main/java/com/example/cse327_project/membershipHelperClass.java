@@ -3,7 +3,10 @@ package com.example.cse327_project;
 import android.widget.EditText;
 
 /**
- * membershipHelperClass represents the information of users that wants membership card.
+ * this class will provide all the information from user.
+ * Will sent all the values to newMembershipActivity page to store the database.
+ * this class will get all the information from user.
+ * Will sent all the values to membership method of newMembershipActivity page to store in the database.
  */
 public class membershipHelperClass
 {
@@ -17,13 +20,15 @@ public class membershipHelperClass
      * @param Password  represents to get Password.
      * @param membershipFor  represents to get the validity value.
      */
-    public membershipHelperClass(String Name, String Mail, String Date, String Password, String membershipFor )
+    public membershipHelperClass( String Name, String Mail, String Date, String Password, String membershipFor )
     {
-        this.Name = Name ;
-        this.Mail = Mail ;
-        this.Date = Date ;
-        this.Password = Password ;
-        this.membershipFor = membershipFor ;
+
+    this.Name = Name ;
+    this.Mail = Mail ;
+    this.Date = Date ;
+    this.Password = Password ;
+    this.membershipFor = membershipFor ;
+
     }
 
     /**
@@ -38,29 +43,32 @@ public class membershipHelperClass
      * getName will send the user's name.
      * @return  name of the user.
      */
-
     public String getName()
     {
-        return Name;
-    }
 
+    return Name;
+
+    }
     /**
      * setName will set the user name that who wants the membership card.
      * @param name  will set the name of ussr.
      */
     public void setName(String name)
     {
-        Name = name;
+
+    Name = name;
+
     }
 
     /**
      * getName will send the user's mail.
      * @return  the mail of user.
      */
-
     public String getMail()
     {
-        return Mail;
+
+    return Mail;
+
     }
 
     /**
@@ -70,27 +78,31 @@ public class membershipHelperClass
 
     public void setMail(String mail)
     {
-        Mail = mail;
+
+    Mail = mail;
+
     }
 
     /**
      * getPassword will send the user's password
      * @return  the password of user.
      */
-
     public String getPassword()
     {
-        return Password;
+
+    return Password;
+
     }
 
     /**
      * setPassword set the user password that who wants the membership card.
      * @param password  will set the mail of user.
      */
-
     public void setPassword(String password)
     {
-        Password = password;
+
+    Password = password;
+
     }
 
     /**
@@ -100,7 +112,9 @@ public class membershipHelperClass
 
     public String getDate()
     {
-        return Date;
+
+    return Date;
+
     }
 
     /**
@@ -110,7 +124,9 @@ public class membershipHelperClass
 
     public void setDate(String date)
     {
-        Date = date;
+
+    Date = date;
+
     }
 
     /**
@@ -120,7 +136,9 @@ public class membershipHelperClass
 
     public String getMembershipFor()
     {
-        return membershipFor;
+
+    return membershipFor;
+
     }
 
     /**
@@ -130,6 +148,8 @@ public class membershipHelperClass
 
     public void setMembershipFor(String membershipFor)
     {
-        this.membershipFor = membershipFor;
+
+    this.membershipFor = membershipFor;
+
     }
 }

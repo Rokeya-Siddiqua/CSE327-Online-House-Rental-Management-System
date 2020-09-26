@@ -47,9 +47,7 @@ public class userRegisterOrLogin extends AppCompatActivity {
     //Initialize variables
     EditText email, pass;
     Button register,login,testHomePageBtn;
-
     private FirebaseAuth mAuth;
-
 
     /**
      * onCreate function is Called when the activity is first created.
@@ -235,6 +233,7 @@ public class userRegisterOrLogin extends AppCompatActivity {
                         startActivity(intentPayment);*/
 
                     } else {
+
                         Toast.makeText(getApplicationContext(), " Login is unsuccessful",Toast.LENGTH_LONG).show();
                         Intent intent = new Intent(userRegisterOrLogin.this, userRegisterOrLogin.class);
                         startActivity(intent);
