@@ -72,7 +72,21 @@
             android:background="#DDD5D5"
             android:layout_toRightOf="@+id/Image_singleRow_ID"
             android:layout_below="@+id/price_singleRow_ID"
-            android:layout_marginLeft="100dp">
+            android:layout_marginLeft="10dp">
+        </Button>
+
+        <Button
+            android:id="@+id/mapTrackButton_singleRow_ID"
+            android:layout_width="wrap_content"
+            android:layout_height="14dp"
+            android:text="Google Map"
+            android:textStyle="bold"
+            android:textSize="11sp"
+            android:textColor="#D80909"
+            android:background="#DDD5D5"
+            android:layout_toRightOf="@+id/DetailsButton_singleRow_ID"
+            android:layout_below="@+id/price_singleRow_ID"
+            android:layout_marginLeft="10dp">
         </Button>
 
 

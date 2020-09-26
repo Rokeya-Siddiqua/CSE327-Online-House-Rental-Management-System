@@ -1,6 +1,9 @@
 package com.example.onlinehouserentalmanagement;
 
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,6 +20,9 @@ import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.orhanobut.dialogplus.DialogPlus;
 import com.orhanobut.dialogplus.ViewHolder;
+import com.squareup.picasso.Picasso;
+
+import java.io.InputStream;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 
@@ -92,6 +98,8 @@ public class myAdapter extends FirebaseRecyclerAdapter<record,myAdapter.myViewHo
                 TextView pet = (TextView) myView.findViewById(R.id.pet_dialog_ID);
                 TextView contact = (TextView) myView.findViewById(R.id.contact_dialog_ID);
 
+                CircleImageView picture = (CircleImageView) myView.findViewById(R.id.showPicture_dialog_ID);
+
 
                 loc.setText("House location: " + model.getLocation());
                 siz.setText("House size: " + model.getSize() + " sq/ft");
@@ -110,18 +118,33 @@ public class myAdapter extends FirebaseRecyclerAdapter<record,myAdapter.myViewHo
                 pet.setText("Pet allowed: " + model.getPet());
                 contact.setText("Contact number: " + model.getContact());
 
+                Picasso.get().load(model.getPuri()).into(picture);
 
                 dialogPlus.show();
             }
         });
 
-        /*holder.trackButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(demoDataFetch.class,googleMap.class);
-                startActivity(intent);
-            }
-        });*/
+
+
+        /**
+         * setOnClickListener is called to set action through a button.
+         * here button will open the house address tracking page through google map.
+         * @param View.OnClickListener  Interface definition for a callback to be invoked when a view is clicked.
+         * This function call a new function named onClick.
+         */
+        holder.trackButton.setOnClickListener(new View.OnClickListener() {
+
+            /**
+             * Called when a view has been clicked.
+             * @param view  The view that was clicked.
+             */
+                @Override
+                public void onClick(View view) {
+                    demoDataFetch.getInstance().callGoogleMapActivity();
+                }
+            });
+
+
     }
 
 
@@ -147,9 +170,10 @@ public class myAdapter extends FirebaseRecyclerAdapter<record,myAdapter.myViewHo
     class myViewHolder extends RecyclerView.ViewHolder{
 
         //Initialize variables
-        CircleImageView img;
+        CircleImageView img, imgDialog;
         TextView location,size,price;
-        Button button/*, trackButton*/;
+        Button button, trackButton;
+
 
         /**
          * Constructs and Initialize a view.
@@ -166,7 +190,10 @@ public class myAdapter extends FirebaseRecyclerAdapter<record,myAdapter.myViewHo
             price = (TextView) itemView.findViewById(R.id.price_singleRow_ID);
 
             button = (Button) itemView.findViewById(R.id.DetailsButton_singleRow_ID);
-            //trackButton = (Button) itemView.findViewById(R.id.googleMap_dialog_ID);
+
+            imgDialog = (CircleImageView) itemView.findViewById(R.id.showPicture_dialog_ID);
+            trackButton = (Button) itemView.findViewById(R.id.mapTrackButton_singleRow_ID);
+
         }
     }
 }

@@ -11,6 +11,11 @@ public class homePageOnlineRental extends AppCompatActivity {
 
     Button tenant, landlord, membership;
 
+    /**
+     * onCreate function is Called when the activity is first created.
+     * This method also provides a Bundle containing the activity's previously frozen state, if there was one.
+     * @param savedInstanceState  it is a Bundle containing the activity's previously frozen state.
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,6 +34,11 @@ public class homePageOnlineRental extends AppCompatActivity {
          * This function call a new function named onClick.
          */
         tenant.setOnClickListener(new View.OnClickListener() {
+
+            /**
+             * Called when a view has been clicked.
+             * @param view  The view that was clicked.
+             */
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(homePageOnlineRental.this, demoDataFetch.class);
@@ -44,6 +54,11 @@ public class homePageOnlineRental extends AppCompatActivity {
          * This function call a new function named onClick.
          */
         landlord.setOnClickListener(new View.OnClickListener() {
+
+            /**
+             * Called when a view has been clicked.
+             * @param view  The view that was clicked.
+             */
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(homePageOnlineRental.this, houseInformationDetailsRegistration.class);
@@ -59,6 +74,11 @@ public class homePageOnlineRental extends AppCompatActivity {
          * This function call a new function named onClick.
          */
         membership.setOnClickListener(new View.OnClickListener() {
+
+            /**
+             * Called when a view has been clicked.
+             * @param view  The view that was clicked.
+             */
             @Override
             public void onClick(View view) {
 
