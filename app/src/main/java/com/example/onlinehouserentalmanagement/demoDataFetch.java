@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -23,6 +24,9 @@ public class demoDataFetch extends AppCompatActivity {
     RecyclerView recyclerView;
     myAdapter adapter;
 
+    private static demoDataFetch instance;
+
+
     /**
      * onCreate function is Called when the activity is first created.
      * This method also provides a Bundle containing the activity's previously frozen state, if there was one.
@@ -34,6 +38,8 @@ public class demoDataFetch extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_demo_data_fetch);
         this.setTitle("Search For House");
+
+        instance = this;
 
         recyclerView = (RecyclerView) findViewById(R.id.RecyclerView_ID);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
@@ -125,4 +131,24 @@ public class demoDataFetch extends AppCompatActivity {
         adapter.startListening();
         recyclerView.setAdapter(adapter);
     }
+
+
+    /**
+     * this method will return the instance of demoDataFetch page.
+     * @return instance  instance of demoDataFetch page.
+     */
+    public static demoDataFetch getInstance()
+    {
+        return instance;
+    }
+
+    /**
+     * this method will open the google map page to track the rental house.
+     */
+    public void callGoogleMapActivity()
+    {
+        Intent intent = new Intent(demoDataFetch.this,googleMap.class);
+        startActivity(intent);
+    }
+
 }
