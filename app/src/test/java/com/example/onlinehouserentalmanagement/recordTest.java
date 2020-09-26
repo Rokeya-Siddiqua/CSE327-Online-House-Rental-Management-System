@@ -292,6 +292,30 @@ public class recordTest {
         assertSame(expected, actual);
     }
 
+    @Test (expected = IllegalArgumentException.class)
+    public void setRoomIllegalArgumentExceptionTest() {
+        String actual = "-5";
+        String expectedNew;
+        record r16 = new record();
+
+        r16.setRoom(actual);
+        expectedNew = r16.getRoom();
+        assertNotNull("room is not null", expectedNew);
+        assertNotNull("object is not null", r16);
+    }
+
+    @Test (expected = NumberFormatException.class)
+    public void setRoomNumberFormatExceptionTest() {
+        String actual = "five rooms";
+        String expectedNew;
+        record r16 = new record();
+
+        r16.setRoom(actual);
+        expectedNew = r16.getRoom();
+        assertNotNull("room is not null", expectedNew);
+        assertNotNull("object is not null", r16);
+    }
+
     @Test (expected = NullPointerException.class)
     public void getBathroomTest() {
         String actual = "total 3 bathrooms";
@@ -341,6 +365,30 @@ public class recordTest {
         assertEquals(expected,actual);
         assertTrue("Yes expected and actual values are equal.", expected==actual);
         assertSame(expected, actual);
+    }
+
+    @Test (expected = IllegalArgumentException.class)
+    public void setBathroomIllegalArgumentExceptionTest() {
+        String actual = "-3";
+        String expectedNew;
+        record r12 = new record();
+
+        r12.setBathroom(actual);
+        expectedNew = r12.getBathroom();
+        assertNotNull("bathroom is not null", expectedNew);
+        assertNotNull("object is not null", r12);
+    }
+
+    @Test (expected = NumberFormatException.class)
+    public void setBathroomNumberFormatExceptionTest() {
+        String actual = "three bathrooms";
+        String expectedNew;
+        record r12 = new record();
+
+        r12.setBathroom(actual);
+        expectedNew = r12.getBathroom();
+        assertNotNull("bathroom is not null", expectedNew);
+        assertNotNull("object is not null", r12);
     }
 
     @Test (expected = NullPointerException.class)

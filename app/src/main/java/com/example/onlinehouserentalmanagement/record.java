@@ -231,6 +231,15 @@ public class record {
      * @param room  total room number of the house.
      */
     public void setRoom(String room) throws NullPointerException{
+        try{
+            double s = Integer.parseInt(room);
+            if (s<0)
+            {
+                throw new IllegalArgumentException("room number can not be less than zero");
+            }
+        }catch (NumberFormatException ex){
+            throw new NumberFormatException("room number can not be string");
+        }
         if(room==null)
         {
             throw new NullPointerException("room number can not be empty");
@@ -257,6 +266,15 @@ public class record {
      * @param bathroom  total bathroom number of the house.
      */
     public void setBathroom(String bathroom) throws NullPointerException{
+        try{
+            double s = Integer.parseInt(bathroom);
+            if (s<0)
+            {
+                throw new IllegalArgumentException("bathroom number can not be less than zero");
+            }
+        }catch (NumberFormatException ex){
+            throw new NumberFormatException("bathroom number can not be string");
+        }
         if(bathroom==null)
         {
             throw new NullPointerException("bathroom number can not be empty");
