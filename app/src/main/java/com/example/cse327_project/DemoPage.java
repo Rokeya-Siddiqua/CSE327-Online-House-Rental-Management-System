@@ -24,6 +24,7 @@ public class demoPage extends AppCompatActivity {
      * This method also provides a Bundle containing the activity's previously frozen state, if there was one.
      * @param savedInstanceState  it is a Bundle containing the activity's previously frozen state.
      */
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -44,6 +45,7 @@ public class demoPage extends AppCompatActivity {
          * @param View.OnClickListener  Interface definition for a callback to be invoked when a view is clicked.
          * This function call a new function named onClick.
          */
+
         loginOrReguster.setOnClickListener(new View.OnClickListener()
         {
 
