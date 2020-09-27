@@ -54,6 +54,7 @@ public class chatAppActivity extends AppCompatActivity {
         lvDisscussionTopics = (ListView) findViewById(R.id.lvDisscussionTopics);
         arrayAdapt = new ArrayAdapter(this, android.R.layout.simple_list_item_1, listOfDisscussion);
         lvDisscussionTopics.setAdapter(arrayAdapt);
+        getUserName();
 
         /**
          * addValueEventListener is called to set action with firebase database.

@@ -102,6 +102,9 @@ public class bkashActivity extends AppCompatActivity {
          Intent intent = new Intent( bkashActivity.this, demoPage.class );
          startActivity(intent);
          Toast.makeText( getApplicationContext(), " Payment successfully done", Toast.LENGTH_LONG ).show();
+         accountNumber.setText(null);
+         Pin.setText(null) ;
+         Amount.setText(null);
 
         }
     }

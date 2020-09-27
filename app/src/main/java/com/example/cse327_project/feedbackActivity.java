@@ -138,6 +138,9 @@ public class feedbackActivity extends AppCompatActivity {
     Firebase reFeedback = Reference.child("Feedback");
     reFeedback.setValue(feedbackInput);
     Toast.makeText(this,"Thank you ",Toast.LENGTH_SHORT).show();
+    userName.setText(null);
+    Feedback.setText(null);
+
 
     }
 }

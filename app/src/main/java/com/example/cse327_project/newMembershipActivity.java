@@ -100,6 +100,11 @@ public class newMembershipActivity extends AppCompatActivity {
         Reference.child(key).setValue(helperClass);
 
         Toast.makeText(getApplicationContext(), "Congratulation, You get 1 year of membership", Toast.LENGTH_LONG).show();
+        Name.setText(null);
+        Mail.setText(null) ;
+        Password.setText(null);
+        Date.setText(null);
+        membershipFor.setText(null);
 
         }
     }

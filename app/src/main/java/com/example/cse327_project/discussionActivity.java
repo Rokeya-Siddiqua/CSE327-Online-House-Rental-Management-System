@@ -88,6 +88,7 @@ public class discussionActivity extends AppCompatActivity {
             map2.put("msg",etMsg.getText().toString());
             map2.put("user",UserName);
             dbr2.updateChildren(map2);
+            etMsg.setText(null);
             }
         });
 
