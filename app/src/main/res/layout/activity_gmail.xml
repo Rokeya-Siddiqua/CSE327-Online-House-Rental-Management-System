@@ -31,12 +31,16 @@
         android:hint="Message"
         />
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/floatingActionButton"
+
+
+    <Button
+        android:id="@+id/sendMailBtn"
+        android:layout_margin="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:clickable="true"
-        tools:srcCompat="@tools:sample/avatars" />
+        android:hint="Send Mail"
+        android:onClick="sendId"
+        tools:ignore="OnClick" />
 
 
 </LinearLayout>
