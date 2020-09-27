@@ -16,7 +16,7 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:layout_marginTop="50dp"
-        android:hint="First Name"
+        android:hint="Name"
         android:inputType="textPersonName" />
 
     <EditText
@@ -28,19 +28,27 @@
         android:inputType="textPersonName" />
 
     <EditText
+        android:id="@+id/idPhone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Phone"
+        android:inputType="number" />
+
+    <EditText
         android:id="@+id/idTime"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
         android:hint="Time"
-        android:inputType="textPersonName" />
+        android:inputType="time" />
     <EditText
         android:id="@+id/idDate"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
         android:hint="Date"
-        android:inputType="textPersonName" />
+        android:inputType="date" />
 
     <EditText
         android:id="@+id/idType"
@@ -49,47 +57,35 @@
         android:ems="10"
         android:hint="Tanent Type"
         android:inputType="textPersonName" />
-    <EditText
-        android:id="@+id/idPayemntType"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="Payment Type"
-        android:inputType="textPersonName" />
-    <EditText
-        android:id="@+id/idAmount"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="Amount"
-        android:inputType="textPersonName" />
-    <EditText
-        android:id="@+id/idCurrency"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="Chaneg Currency"
-        android:inputType="textPersonName" />
-
-    <EditText
-        android:id="@+id/idPhone"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="Phone"
-        android:inputType="textPersonName" />
 
 
+    <TextView
+        android:layout_width="227dp"
+        android:layout_height="wrap_content"
+        android:text="Payment with?"
+        android:textSize="28dp" />
+
+    <RadioButton
+        android:id="@+id/idBkash"
+        android:layout_width="179dp"
+        android:layout_height="wrap_content"
+        android:text="bKash" />
+
+    <RadioButton
+        android:id="@+id/idRocket"
+        android:layout_width="183dp"
+        android:layout_height="wrap_content"
+        android:text="Rocket" />
 
     <Button
-        android:id="@+id/btnSubmit"
+        android:id="@+id/idNext"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="45dp"
         android:layout_marginTop="20dp"
         android:layout_marginRight="45dp"
         android:gravity="center"
-        android:text="Submit"
+        android:text="Next"
         android:textColor="@android:color/black" />
 
 
