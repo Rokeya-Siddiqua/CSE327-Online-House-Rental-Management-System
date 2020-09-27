@@ -3,6 +3,7 @@ package com.example.cse327_project;
 import android.widget.EditText;
 
 import com.firebase.client.Firebase;
+import java.util.InputMismatchException;
 
 /**
  * this class will provide all the information from user.
@@ -12,7 +13,7 @@ import com.firebase.client.Firebase;
  */
 public class paymentHelperClass {
     String Name,Mail,Time,Date,tenantType,Phone,Bkash,Rocket;
-    private Firebase Reference;
+
 
     /**
      * This method will get all the information from the user.
@@ -50,154 +51,256 @@ public class paymentHelperClass {
      * getName will send the user's name.
      * @return  name of the user.
      */
-    public String getName()
+    public String getName() throws NullPointerException
     {
+        if( Name == null )
+        {
 
-    return Name;
+        throw new NullPointerException("Name can not be empty");
+
+        }
+        return Name;
 
     }
     /**
      * setName will set the user name that whoever wants payment.
+     * this method will throw an NullPointerException exception if the name is empty.
      * @param name  will set the name of ussr.
      */
-    public void setName(String name)
+    public void setName(String name) throws NullPointerException
     {
 
-    Name = name;
+        if( name == null )
+        {
+
+        throw new NullPointerException("Name can not be empty");
+
+        }
+        this.Name = name;
 
     }
     /**
      * getTime will time the user's name.
+     * this method will throw an NullPointerException exception if the time is empty.
      * @return  time of the user.
      */
-    public String getTime()
+    public String getTime() throws NullPointerException
     {
 
-    return Time;
+        if( Time == null )
+        {
+
+        throw new NullPointerException("Time can not be empty");
+
+        }
+        return Time;
 
     }
     /**
      * setTime will set the user time that whoever wants payment.
+     * this method will throw an NullPointerException exception if the time is empty.
      * @param  time  will set the name of ussr.
      */
-    public void setTime(String time)
+    public void setTime(String time) throws NullPointerException
     {
 
-    Time = time;
+        if( Time == null )
+        {
+
+        throw new NullPointerException("Time can not be empty");
+
+        }
+        this.Time = time;
 
     }
     /**
      * getMail will time the user's name.
+     * this method will throw an NullPointerException exception if the mail is empty.
      * @return  time of the user.
      */
-    public String getMail()
+    public String getMail() throws NullPointerException
     {
+        if( Mail == null )
+        {
+
+        throw new NullPointerException("Mail can not be empty");
+
+        }
         return Mail;
     }
     /**
      * setMail will set the user time that whoever wants payment.
+     * this method will throw an NullPointerException exception if the mail is empty.
      * @param  mail  will set the name of ussr.
      */
-    public void setMail(String mail)
+    public void setMail(String mail)throws NullPointerException
     {
-        Mail = mail;
+        if( Mail == null )
+        {
+
+        throw new NullPointerException("Mail can not be empty");
+
+        }
+        this.Mail = mail;
     }
     /**
      * getDate will time the user's name.
+     * this method will throw an NullPointerException exception if the date is empty.
      * @return  date of the user.
      */
-    public String getDate()
+    public String getDate() throws NullPointerException
     {
+        if( Date == null )
+        {
 
-    return Date;
+        throw new NullPointerException("Date can not be empty");
+
+        }
+        return Date;
 
     }
     /**
      * setDate will set the user time that whoever wants payment.
+     * this method will throw an NullPointerException exception if the date is empty.
      * @param  date  will set the name of ussr.
      */
-    public void setDate(String date)
+    public void setDate(String date) throws NullPointerException
     {
+        if( Date == null )
+        {
 
-    Date = date;
+        throw new NullPointerException("Date can not be empty");
+
+        }
+        this.Date = date;
 
     }
     /**
      * getTenantType will time the user's name.
+     * this method will throw an NullPointerException exception if the tenant type is empty.
      * @return  tenantType of the user.
      */
-    public String getTenantType()
+    public String getTenantType() throws NullPointerException
     {
+        if( tenantType == null )
+        {
 
-    return tenantType;
+        throw new NullPointerException("tenantType can not be empty");
+
+        }
+        return tenantType;
 
     }
     /**
      * setTenantType will set the user time that whoever wants payment.
+     * this method will throw an NullPointerException exception if the tenant type is empty.
      * @param  tenantType  will set the name of ussr.
      */
 
-    public void setTenantType(String tenantType)
+    public void setTenantType(String tenantType) throws NullPointerException
     {
+        if( tenantType == null )
+        {
+
+            throw new NullPointerException("tenantType can not be empty");
+
+        }
         this.tenantType = tenantType;
     }
     /**
      * getPhone will time the user's name.
+     * this method will throw an NullPointerException exception if the phone type is empty.
      * @return  phone of the user.
      */
-    public String getPhone()
+    public String getPhone() throws NullPointerException
     {
+        if( Phone == null )
+        {
+
+        throw new NullPointerException("Phone can not be empty");
+
+        }
         return Phone;
     }
     /**
      * setPhone will set the user time that whoever wants payment.
+     * this method will throw an NullPointerException exception if the phone type is empty.
      * @param  phone  will set the name of ussr.
      */
-    public void setPhone(String phone)
+    public void setPhone(String phone) throws NullPointerException
     {
+        if( Phone == null )
+        {
 
-    Phone = phone;
+            throw new NullPointerException("Phone can not be empty");
+
+        }
+        this.Phone = phone;
 
     }
     /**
      * getBkash will time the user's name.
+     * this method will throw an NullPointerException exception if the bkash is empty.
      * @return  baksh of the user.
      */
-    public String getBkash()
+    public String getBkash() throws NullPointerException
     {
+        if( Bkash == null )
+        {
 
-    return Bkash;
+        throw new NullPointerException("Bkash can not be empty");
+
+        }
+        return Bkash;
 
     }
     /**
      * setBkash will set the user time that whoever wants payment.
+     * this method will throw an NullPointerException exception if the bkash is empty.
      * @param  bkash  will set the name of ussr.
      */
-    public void setBkash(String bkash)
+    public void setBkash(String bkash) throws NullPointerException
     {
+        if( Bkash == null )
+        {
 
-    Bkash = bkash;
+        throw new NullPointerException("Bkash can not be empty");
+
+        }
+        this.Bkash = bkash;
 
     }
     /**
      * getRocket will time the user's name.
+     * this method will throw an NullPointerException exception if the rocket is empty.
      * @return  Rocket of the user.
      */
 
-    public String getRocket()
+    public String getRocket() throws NullPointerException
     {
+        if( Rocket == null )
+        {
 
-    return Rocket;
+        throw new NullPointerException("Rocket can not be empty");
+
+        }
+        return Rocket;
 
     }
     /**
      * setRocket will set the user time that whoever wants payment.
+     * this method will throw an NullPointerException exception if the rocket is empty.
      * @param  rocket  will set the name of ussr.
      */
-    public void setRocket(String rocket)
+    public void setRocket(String rocket) throws NullPointerException
     {
+        if( Rocket == null )
+        {
 
-    Rocket = rocket;
+        throw new NullPointerException("Rocket can not be empty");
+
+        }
+        this.Rocket = rocket;
 
     }
 }
