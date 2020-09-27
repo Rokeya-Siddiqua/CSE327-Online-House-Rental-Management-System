@@ -19,10 +19,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".homePageOnlineRental" />
+        <activity android:name=".userRegisterOrLogin" />
+        <activity android:name=".demoPage" />
+        <activity android:name=".bkashActivity" />
+        <activity android:name=".gmailActivity" />
         <activity android:name=".discussionActivity" />
         <activity android:name=".feedbackActivity" />
         <activity android:name=".newMembershipActivity" />
-        <activity android:name=".membershipAcitivity" />
         <activity android:name=".paymentActivity" />
         <activity android:name=".smsActivity" />
         <activity android:name=".chatAppActivity" />
@@ -43,9 +47,6 @@
             android:label="@string/title_activity_maps" />
         <activity android:name=".Floating" />
         <activity android:name=".HomePage" />
-        <activity android:name=".Login" />
-        <activity android:name=".Register" />
-        <activity android:name=".DemoPage" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
