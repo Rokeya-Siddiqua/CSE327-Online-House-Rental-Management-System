@@ -80,7 +80,7 @@ public class bkashActivity extends AppCompatActivity {
         String totalAmount = Amount.getText().toString();
         String accountNum = accountNumber.getText().toString();
 
-        if( ( TextUtils.isEmpty(bkashPin) ||  bkashPin.length() != 5 ) || ( TextUtils.isEmpty(accountNum) || accountNum.length() != 7 ) )
+        if( ( TextUtils.isEmpty(bkashPin) ) || ( TextUtils.isEmpty(accountNum) ) )
         {
 
          Pin.setError( "Bkash Pin is required" );
