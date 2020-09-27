@@ -4,122 +4,193 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_alignParentEnd="true"
-    android:layout_alignParentRight="true"
-    android:layout_alignParentBottom="true"
     android:background="#3E6F95"
-    android:layout_gravity="center"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context=".demoPage">
 
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginBottom="5dp"
-        android:clickable="false"
-        android:paddingTop="90dp"
-        android:gravity="center_horizontal"
-        android:text="Demo Page"
-        android:textSize="30dp"
-        android:textStyle="bold" />
-
-    <Button
-        android:id="@+id/RegisterId"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginBottom="5dp"
-        android:gravity="center"
-        android:text="Register"
-        android:textColor="@android:color/black" />
+        android:layout_height="match_parent">
 
-    <Button
-        android:id="@+id/membershipId"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginBottom="5dp"
-        android:gravity="center"
-        android:text="Membership"
-        android:textColor="@android:color/black" />
-
-    <Button
-        android:id="@+id/feedbackId"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginBottom="5dp"
-        android:gravity="center"
-        android:text="Feedback"
-        android:textColor="@android:color/black" />
-
-
-    <Button
-        android:id="@+id/paymentId"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginBottom="5dp"
-        android:gravity="center"
-        android:text="Payment"
-        android:textColor="@android:color/black" />
-
-    <Button
-        android:id="@+id/LoginId"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginBottom="150dp"
-        android:gravity="center"
-        android:text="LOGIN"
-        android:textColor="@android:color/black" />
-
-
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-
-        android:background="@android:color/black"
-        android:orientation="vertical">
-
-        <TextView
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_gravity="center"
-            android:padding="12dp"
-            android:text="@string/contact_us"
-            android:textColor="@color/colorWhite"
-            android:textSize="25dp" />
+            android:orientation="vertical">
 
-        <Button
-            android:id="@+id/btnCHATAPP"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/chatapp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Online House Rental Management System"
+                android:textStyle="bold"
+                android:textSize="35sp"
+                android:textColor="#B61515"
+                android:gravity="center_horizontal"
+                android:background="#B6C2D1">
+            </TextView>
 
-        <Button
-            android:id="@+id/btnGAMAIL"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/gamail" />
 
-        <Button
-            android:id="@+id/btnSMS"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/sms" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Welcome To Our System"
+                android:textStyle="bold"
+                android:textSize="15sp"
+                android:textColor="@color/common_google_signin_btn_text_light_pressed"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="30dp">
+            </TextView>
 
-    </LinearLayout>
+            <Button
+                android:id="@+id/loginOrRegister_demoPage_ID"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Register or Login"
+                android:textSize="25sp"
+                android:textColor="#022513"
+                android:textStyle="bold"
+                android:background="@android:color/darker_gray"
+                android:layout_marginTop="15dp"
+                android:layout_gravity="center_horizontal">
+            </Button>
+
+            <Button
+                android:id="@+id/membership_demoPage_ID"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Membership"
+                android:textSize="25sp"
+                android:textColor="#022513"
+                android:textStyle="bold"
+                android:background="@android:color/darker_gray"
+                android:layout_marginTop="15dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="50dp">
+            </Button>
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:background="#373030">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="200dp"
+                        android:orientation="vertical"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="15dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Contact Us"
+                            android:textStyle="bold"
+                            android:textSize="30sp"
+                            android:textColor="#FBF8F8"
+                            android:layout_marginBottom="10dp">
+                        </TextView>
+
+                        <Button
+                            android:id="@+id/email_demoPage_ID"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Email"
+                            android:textStyle="bold"
+                            android:textSize="20sp"
+                            android:textColor="#FBF8F8"
+                            android:layout_marginLeft="20dp"
+                            android:background="#373030">
+                        </Button>
+
+                        <Button
+                            android:id="@+id/sms_demoPage_ID"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="SMS"
+                            android:textStyle="bold"
+                            android:textSize="20sp"
+                            android:textColor="#FBF8F8"
+                            android:layout_marginLeft="20dp"
+                            android:background="#373030">
+                        </Button>
+
+                        <Button
+                            android:id="@+id/chat_demoPage_ID"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Chat"
+                            android:textStyle="bold"
+                            android:textSize="20sp"
+                            android:textColor="#FBF8F8"
+                            android:layout_marginLeft="20dp"
+                            android:background="#373030">
+                        </Button>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginLeft="60dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="About Us"
+                            android:textSize="30sp"
+                            android:textColor="#FBF8F8"
+                            android:textStyle="bold"
+                            android:layout_marginTop="10dp">
+                        </TextView>
+
+                        <Button
+                            android:id="@+id/about_demoPage_ID"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="About"
+                            android:textStyle="bold"
+                            android:textSize="20sp"
+                            android:textColor="#FBF8F8"
+                            android:layout_marginLeft="20dp"
+                            android:background="#373030">
+                        </Button>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Feedback"
+                            android:textSize="30sp"
+                            android:textColor="#FBF8F8"
+                            android:textStyle="bold"
+                            android:layout_marginTop="10dp">
+                        </TextView>
+
+                        <Button
+                            android:id="@+id/feedbackID"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Feedback"
+                            android:textStyle="bold"
+                            android:textSize="20sp"
+                            android:textColor="#FBF8F8"
+                            android:layout_marginLeft="20dp"
+                            android:background="#373030">
+                        </Button>
+
+                    </LinearLayout>
+                    </LinearLayout>
+
+            </ScrollView>
+
+
+
+        </LinearLayout>
+    </ScrollView>
 
 </LinearLayout>
